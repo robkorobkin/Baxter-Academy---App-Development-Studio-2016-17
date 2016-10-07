@@ -1,4 +1,16 @@
-.test p{
-	
+.container {
+	background: blue;
 	color: white;
+	text-align: center;
+	width: 400px;
+	height: 500px;
+	margin: 40px auto;
+}
+
+.test {
+	float: left;
+}
+
+.test-right {
+	float: right;
 }
