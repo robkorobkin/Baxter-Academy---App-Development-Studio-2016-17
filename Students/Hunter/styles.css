@@ -1,0 +1,31 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #272822;
+}
+.topbar {
+	background: #ccc;
+	line-height: 15px;
+	height: 15px;
+	font-size: 13px;
+	padding: 5px
+}
+.menubar {
+	background: url(menu-bg.png);
+	font-size: 12px;
+	padding: 3px
+}
+.menubar a {
+	padding: 0 6px
+}
+
+.tabbar{
+	background: black;
+	border-bottom: 1px solid #444;
+	padding: 7px;
+}
+.navArrow {
+	color: #868686;
+	font-size: 24px
+}
