@@ -4,16 +4,31 @@
 	font-family: tahoma, sans-serif
 }
 
-.ezbackround{
+.ezheadbackground{
 
-	background-color: #1542A3
+	background-color: #007EB3
 
 }
 
-.center{
+.ezcenter{
 	text-align: center;
 }
 
-.right{
+.ezright{
 	text-align: right;
+}
+
+.ezpbackground{
+
+	background-color: #303131
+}
+
+body{
+	padding:0;
+	margin: 0
+}
+
+.ezdiv div{
+
+	font-size: 300%
 }
