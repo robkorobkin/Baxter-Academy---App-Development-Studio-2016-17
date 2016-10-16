@@ -54,8 +54,8 @@ body {
 .tab .dot {
 	float: right;
 	line-height: 35px;
-	font-size: 7px;  
-	
+	font-size: 9px;  
+	color: #7D7E7A;
 }
 
 table {
@@ -82,4 +82,8 @@ td:last-child {
 
 .htmlElement {
 	color: #D92672;
+}
+
+#9 {
+	
 }
