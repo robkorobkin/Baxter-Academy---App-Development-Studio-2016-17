@@ -76,7 +76,7 @@ var isadult = (age < 18) ? "Too young":"Old Enough"
 
 */
 
-if (true = false) {
+if (true == false) {
 
 	alert("Something is not right...")
 }
@@ -86,7 +86,7 @@ if (true = false) {
 // the next line of code is most commonly the "else" statement so if the conditions arent true or
 // are undefined it will execute the else
 
-if (true = false) {
+if (true == false) {
 
 	alert("something is not right...")
 }
@@ -98,7 +98,7 @@ else {
 
 // if you want to check if the statement is false first you can use the else if statement
 
-else if (true = false) {
+else if (true == false) {
 
 	alert("Good")
 }
@@ -177,9 +177,9 @@ for (i=1, i<=1; i++) {
 }
 */
 
-var i=0
+var i=0;
 while (i<=10) {
-	document.write(i + "<br/>")
+	document.write(i + "<br/>");
 	i++;
 }
 

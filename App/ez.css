@@ -67,4 +67,11 @@ footer {
 	width: 60%;
 }
 
+.map img {
+	height: 50%;
+	width: 50%
+}
 
+.padding div{
+	padding: 10px;
+}
