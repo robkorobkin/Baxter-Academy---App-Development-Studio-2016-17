@@ -6,12 +6,14 @@ body 				{ background: black; }
 .window_ctrls		{ float: right; float: top;  padding: 0px;}
 .window_ctrls img	{ float: top; padding-right: 0px;}
 .logo				{position: absolute; left: 0;}
-.purchased			{position: absolute; left: 50%; margin-left: -75px; color: #e6e6e6;}	
-.file_options		{color: #e6e6e6; padding-top: 30px; padding-bottom: 15px; font-size: 12px;}
+.purchased			{position: absolute; left: 50%; margin-left: -75px; color: #e6e6e6; padding-top: 5px;}	
+.file_options		{color: #e6e6e6; padding-top: 30px; padding-bottom: 5px; font-size: 12px;}
 .file_options a 	{padding-left: 5px; padding-right: 5px;}
-.leftarrow 			{padding-left: 25px; color: #575757}
-.rightarrow			{padding-left: 25px; color: #575757}
-.user_area			{position: relative; height: 35px; color: #575757}
-.user				{position: absolute; left: 50%;}
-.search				{position: absolute; left: 8.5%; height: 30px; width: 90px; border-radius: 50px; border: 2px #282828;}
+.leftarrow 			{padding-left: 25px; color: #575757;}
+.rightarrow			{padding-left: 25px; color: #575757;padding-right: 25px;}
+.user_area			{display: flex; height: 35px; color: #575757}
+.user				{position: absolute; left: 80%;}
+.search				{height: 30px; width: 140px; border-radius: 50px; border: 2px #282828; position: relative;}
 .inbox				{padding-right: 25px}
+.back_forth			{position: relative; left: 1%;}
+.downarrow			{ padding-right: 50px;}
