@@ -1,7 +1,30 @@
-.eztext{
-	
-	color: white;
+html {
+	height: 100%
+}
+
+body{
+	padding:0px;
+	margin: 0;
+	position: relative;
 	font-family: tahoma, sans-serif;
+	background: url('homeimg.png') center center no-repeat;
+	background-size: cover;
+}
+
+
+.eztext, p, strong{
+
+	color: #FFFFFF;
+
+
+}
+.btn {
+	width: 200px;
+	background: #007EB3;
+	border-radius: 20px;
+	padding: 30px;
+	margin: 10px auto;
+
 }
 
 .ezheadbackground{
@@ -20,18 +43,10 @@
 
 .ezpbackground{
 
-	background-color: #303131
+	background-color: white;
 }
 
-html {
-	height: 100%
-}
 
-body{
-	padding:0px;
-	margin: 0;
-	position: relative;
-}
 
 .ezdiv div{
 
@@ -44,6 +59,12 @@ body{
 	width: 400px;
 	max-width: 90%;
 }
+
+.hpContent {
+	
+	min-height: 100%
+}
+
 
 footer {
 	position: fixed;
