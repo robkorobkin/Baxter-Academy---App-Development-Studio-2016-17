@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+  		<title> Map </title>
+  		<link rel="stylesheet" href="ez.css">
+  		<script
+			  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+			  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+			  crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+
+			// when the page loads, run this code...
+			$(function(){
+
+
+				// define a function "updateStage"
+				var updateStage = function(){
+
+					console.log('call back fired!')
+				
+					// set a variable "room" to be the value of #rm_selector
+					var room = $('#rm_selector').val();
+
+					console.log(room)
+
+
+					// use this variable to build an html string
+					var html =	'<img src= "rooms\\' + room + '.png\" class=\"homeimg\" />';
+
+
+					console.log('trying to render this html:');
+					console.log(html);
+
+
+					// insert this html string as the body of the HTML element with the id "stage"
+					$('#stage').html(html);
+				}
+				
+
+				// select the HTML element with the id "rm_selector"
+				var selectBox = $('#rm_selector');
+
+				// when the value of that element changes, call the function we defined above
+				selectBox.change(updateStage);
+
+			})
+		
+		</script>
+
+  		</head>
+ 	<body class="ezpbackground">
+ 		<div class="ezheadbackground ezdiv">
+  			<div class="eztext ezcenter"> <strong> Blueprint </strong> </div> 
+  		</div>
+  		<h2 class="eztext ezcenter"> Navigate the school: </h2>
+  		<h3 class="eztext ezcenter">By room(Rooms are sorted a-z)</h3>
+  		<div class="ezcenter"/>
+	  		<select id="rm_selector">
+				<option>Select...</option>
+				<option>Angelou</option>
+				<option>Annex</option>
+				<option>Bathrooms1</option>
+				<option>Bathrooms2</option>
+				<option>Bathrooms3</option>
+				<option>Bernoulli</option>
+				<option>Confucius</option>
+				<option>Darwin</option>
+				<option>Dilla</option>
+				<option>Euclid</option>
+				<option>Fablab</option>
+				<option>Greatroom</option>
+				<option>Greely</option>
+				<option>Hopper</option>
+				<option>Khayyam</option>
+				<option>Longfellow</option>
+				<option>Mirzakhani</option>
+				<option>Newton</option>
+				<option>Occam</option>
+				<option>Office</option>
+				<option>Pasteur</option>
+				<option>Turing</option>
+				<option>Verne</option>
+				<option>Wyeth</option>
+				<option>Xeno</option>
+	  		</select>
+  		</div>
+  		<br/>
+  		<div id="stage"> 
+  			<img src="rooms\select....png" class="homeimg"/> 
+  		</div>
+
+		<footer class="ezheadbackground"> 
+	 	  	<div class="footerNav">
+
+	 	  		<div class="iconFrame">
+	 	  			<img src="web.png" /> 
+	 	  		</div>
+	 	
+	 	  		<div class="iconFrame">
+		 	  		<img src="location-pin.png" /> 
+	 			</div>
+
+		 	  	<div class="iconFrame">
+	 	  			<img src="blueprint.png"/>
+	 	  		</div>
+
+	 	  		<div class="iconFrame">
+	 	  			<img src="credits.png"/>
+	 	  		</div>
+ 	  		</div>
+ 	  	</footer>
+
+ 	</body>
+
+ </html>
