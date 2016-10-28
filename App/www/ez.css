@@ -7,7 +7,7 @@ body{
 	margin: 0;
 	position: relative;
 	font-family: tahoma, sans-serif;
-	background: url('homeimg.png') center center no-repeat;
+	background: url('images/icons/homeimg.png') center center no-repeat;
 	background-size: cover;
 }
 
@@ -101,14 +101,4 @@ footer {
 	max-width: 75%
 	width: 200px;
 
-}
-
-.smallersize {
-
-	height: 16.45%;
-	width: 16.45%;
-}
-
-.alinecenter {
-	text-align: center;
 }

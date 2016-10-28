@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget 	xmlns   	= "http://www.w3.org/ns/widgets" 
+		    xmlns:gap   = "http://phonegap.com/ns/1.0" 
+		    id          = "org.baxter-academy.baxter" 
+		    versionCode = "1" 
+		    version     = "0.0.1" >
+
+		<!-- versionCode is optional and Android only -->
+
+		<name>BA Navigator</name>
+
+		<description>
+		    This app helps visitors to the Baxter Academy in Portland, Maine locate different classrooms on the school's campus. 
+		</description>
+
+		<author href="https://www.baxter-academy.org" email="rob.korobkin@baxter-academy.org">
+		    James Heffernan, Hunter Howe, Darcy Ross, Ryan Silke, Ryan Tarling and Rob Korobkin
+		</author>
+
+		<platform name="ios" />
+		<platform name="android" />
+		<platform name="winphone" />
+
+		<!-- Specify phonegap version -->
+		<preference name="phonegap-version" value="cli-6.3.0" />
+
+		<!-- This allows the app to take over the entire screen area -->
+		<preference name="fullscreen" value="true" />
+
+		<!-- This allows external links to open in the default browser, 'true' would use the webview the app lives in (iOS) -->
+		<preference name="stay-in-webview" value="false" /> 
+
+		<!--
+        If you do not want any permissions to be added to your app, add the
+        following tag to your config.xml; you will still have the INTERNET
+        permission on your app, which PhoneGap requires.
+	    -->
+	    <preference name="permissions"                value="none"/>
+
+	    <!-- Customize your app and platform with the preference element. -->
+	    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+	    <preference name="fullscreen"                 value="false" />          <!-- all: hides the status bar at the top of the screen -->
+	    <preference name="target-device"              value="universal" />      <!-- ios: possible values handset, tablet, or universal -->
+	    <preference name="prerendered-icon"           value="false" />          <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+	    <preference name="detect-data-types"          value="false" />          <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+	    <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+	    <preference name="deployment-target"          value="7.0" />            <!-- ios: This sets the IPHONEOS_DEPLOYMENT_TARGET in the build, which tranlsates to the MinimumOSVersion in the ipa Propertly List. -->
+	    <preference name="webviewbounce"              value="false" />          <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+	    <preference name="DisallowOverscroll"         value="true" />           <!-- both: stop UIWebView bouncing vertically -->
+	    <preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+	    <preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+	    <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+	    <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+	    <preference name="android-minSdkVersion"      value="15" />             <!-- android: API level 15 is Android 4.0.3, ICE_CREAM_SANDWICH_MR1. MIN SDK version supported on the target device. MAX version is blank by default. -->
+	    <preference name="android-targetSdkVersion"   value="15" />             <!-- To hide the "..." (overflow menu) on Android, see http://stackoverflow.com/questions/20375626/disabling-android-menu-button-in-phonegap-build -->
+	    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+
+	    <!-- Hiding status bar on ios, see http://stackoverflow.com/questions/20734117/how-to-remove-ios-status-bar-with-phonegap-build -->
+	    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+	        <false/>
+	    </gap:config-file>
+	    <gap:config-file platform="ios" parent="UIStatusBarHidden" overwrite="true">
+	        <true/>
+	    </gap:config-file>
+
+	    <gap:plugin name="cordova-plugin-splashscreen" gap:platform="ios" source="npm" spec="3.0.0" />
+
+
+
+		<!-- This sets the icons for the app -->
+		<icon src="images/logo/baxter-logo-57.png" gap:platform="ios" width="57" height="57" />
+		<icon src="images/logo/baxter-logo-72.png" gap:platform="ios" width="72" height="72" />
+		<icon src="images/logo/baxter-logo-76.png" gap:platform="ios" width="76" height="76" />
+		<icon src="images/logo/baxter-logo-120.png" gap:platform="ios" width="120" height="120" />
+		<icon src="images/logo/baxter-logo-152.png" gap:platform="ios" width="152" height="152" />
+
+		<!-- images are determined by width and height. The following are supported -->
+	  <!--   <splash src="client/splash/320.png" width="320" height="480"/>
+	    <splash src="client/splash/640.png" width="640" height="960"/>
+	    <splash src="client/splash/768.png" width="768" height="1024"/>
+	    <splash src="client/splash/1024.png" width="1024" height="768"/>
+	    <splash src="client/splash/1242.png" width="1242" height="2208"/>
+	    <splash src="client/splash/2208.png" width="2208" height="1242"/>
+ -->
+
+	    <!-- IPHONE 6: 1080 x 1920 -->
+<!-- 		<splash src="client/splash/1080.png" width="1080" height="1920"/>
+		<splash src="client/splash/1920.png" width="1920" height="1080"/>
+ -->
+<!-- 	    IPHONE 6s: 750 x 1334
+	    <splash src="client/splash/750.png" width="750" height="1334"/>
+	    <splash src="client/splash/1334.png" width="1334" height="750"/>
+ -->
+
+	    <!-- IPHONE SE 640 x 1136-->
+<!-- 	    <splash src="client/splash/640b.png" width="640" height="1136"/>
+	    <splash src="client/splash/1136.png" width="1136" height="640"/>
+ -->
+
+	    <!-- LARGE IPAD 2048 x 2732-->
+<!-- 		<splash src="client/splash/2048b.png" width="2048" height="2732"/>
+	    <splash src="client/splash/2732.png" width="2732" height="2048"/>
+ -->
+
+	    <!-- SMALL IPAD -->
+<!-- 	    <splash src="client/splash/1536.png" width="1536" height="2048"/>
+		<splash src="client/splash/2048.png" width="2048" height="1536"/>
+ -->
+
+
+		<!-- This includes specific plugins to be used in the app -->
+		<plugin name="cordova-plugin-inappbrowser" />  
+		<plugin name="cordova-plugin-statusbar" />
+
+	
+
+		<!-- ??? -->
+		<!-- <content src="index.html" /> -->
+
+		<!-- This allows the app to load assets from all *.newearthconnect.com domains -->
+		<access origin="*" />
+
+
+</widget>
