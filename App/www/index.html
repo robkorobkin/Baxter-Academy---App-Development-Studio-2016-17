@@ -10,6 +10,7 @@
 
 		<!-- APP SCRIPT -->
 		<script src="scripts/baxter.js"></script>
+			
 			<!-- Map Script -->
 		 <script
 			  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
@@ -18,39 +19,36 @@
 
 		<script type="text/javascript">
 
+			// define a function "updateStage"
+			updateStage = function(){
+
+				console.log('call back fired!')
+			
+				// set a variable "room" to be the value of #rm_selector
+				var room = $('#rm_selector').val();
+
+				console.log(room)
+
+
+				// use this variable to build an html string
+				var html =	'<img src= "images\\floorplan\\' + room + '.png\" class=\"homeimg\" />';
+
+
+				console.log('trying to render this html:');
+				console.log(html);
+
+
+				// insert this html string as the body of the HTML element with the id "stage"
+				$('#stage').html(html);
+			}
+
+
 			// when the page loads, run this code...
 			$(function(){
 
-
-				// define a function "updateStage"
-				var updateStage = function(){
-
-					console.log('call back fired!')
-				
-					// set a variable "room" to be the value of #rm_selector
-					var room = $('#rm_selector').val();
-
-					console.log(room)
-
-
-					// use this variable to build an html string
-					var html =	'<img src= "images\\floorplan\\' + room + '.png\" class=\"homeimg\" />';
-
-
-					console.log('trying to render this html:');
-					console.log(html);
-
-
-					// insert this html string as the body of the HTML element with the id "stage"
-					$('#stage').html(html);
-				}
-				
-
 				// select the HTML element with the id "rm_selector"
-				var selectBox = $('#rm_selector');
-
 				// when the value of that element changes, call the function we defined above
-				selectBox.change(updateStage);
+				$('#rm_selector').change(updateStage);
 
 			})
 		
@@ -58,18 +56,17 @@
 
 	</head>
 
- 	<body class="ezpbackground" ng-app="baxterApp" ng-controller="baxterCtrl">
-
- 		<div class="ezheadbackground ezdiv">
-  			<div class="ezcenter"> <strong> Home </strong> </div> 
-  		</div>
+ 	<body ng-app="baxterApp" ng-controller="baxterCtrl" ng-class="{homeback : view == 'home', staffback : view == 'staff'  } ">
 
   		<div class="pageContent">
 
 
 
-  			<div class="hpContent" ng-if="view == 'home' ">
-		 		<div class="eztext ezcenter"> Welcome to the Baxter Academy App! </div>
+  		<div class="hpContent" ng-if="view == 'home' ">
+  			<div class="ezheadbackground ezdiv">
+  			<div class="ezcenter"> <strong> Home </strong> </div> 
+  		</div>
+		 		<div class="eztext ezcenter "><h2> Welcome to the Baxter Academy App! </h2></div>
 		 		<h3 class="eztext ezcenter"> Quick links: </h3>
 		 		<div class="ezcenter btn">
 		 			<a href="" class="eztext"> Call school:</a> <br/>
@@ -77,6 +74,7 @@
 					<a href="" class="eztext"> +1-207-699-5500 </a>
 		 		</div>
 		 	</div>
+
 		
 
 
@@ -84,10 +82,11 @@
 		<div class="ezheadbackground ezdiv">
 		<div class="eztext ezcenter"> <strong> Blueprint </strong> </div> 
   		</div>
+  		<div class="ezpbackground"> 
   		<h2 class="eztext ezcenter"> Navigate the school: </h2>
-  		<h3 class="eztext ezcenter">By room(Rooms are sorted a-z)</h3>
+  		<h3 class="eztext ezcenter">By room(Rooms are sorted -z)</h3>
   		<div class="ezcenter"/>
-	  		<select id="rm_selector">
+	  		<select id="rm_selector" onchange="updateStage()">
 				<option>Select...</option>
 				<option>Angelou</option>
 				<option>Annex</option>
@@ -117,11 +116,47 @@
 	  		</select>
   		</div>
   		
-  		<br/>
+  	
   		<div id="stage"> 
   			<img src="images\floorplan\select....png" class="homeimg"/> 
   		</div>
 	</div>
+</div>
+	<div ng-if="view == 'staff' ">
+		<div class="ezheadbackground ezdiv">
+  			<div class="eztext ezcenter"> <strong>Meet the Staff</strong> </div> 
+  		</div>
+ 		<div class="alinecenter">
+ 	  			<img src="images\pictures\110.jpg" class="smallersize"/>
+ 	  		<h1 style="color: white"> Ryan Tarling</h1>
+ 	  			<h2 style="color: white">Job:</h2>
+ 	  			<h3 style="color: white">Coder</h3>
+ 	  			<img src="images\pictures\111.jpg" class="smallersize"/>
+ 	  		<h1 style="color: white"> James Heffernan</h1>
+ 	  			<h2 style="color: white">Job:</h2>
+ 	  			<h3 style="color: white">Coder</h3>
+ 	  			<h3 style="color: white">Graphic Designer</h3>
+ 	  			<img src="images\pictures\112.jpg" class="smallersize"/>
+ 	  		<h1 style="color: white"> Hunter Howe</h1>
+ 	  			<h2 style="color: white">Job:</h2>
+ 	  			<h3 style="color: white">Coder</h3>
+ 	  			<h3 style="color: white">Photo Taker</h3>
+ 	  			<img src="images\pictures\113.jpg" class="smallersize"/>
+ 	  		<h1 style="color: white"> Darcy Ross</h1>
+ 	  			<h2 style="color: white">Job:</h2>
+ 	  			<h3 style="color: white">Coder</h3>
+ 	  			<img src="images\pictures\114.jpg" class="smallersize"/>
+ 	  		<h1 style="color: white"> Rob Korobkin </h1>
+ 	  			<h2 style="color: white">Job:</h2>
+ 	  			<h3 style="color: white">Project Advisor</h3>
+ 	  			<img src="images\pictures\115.jpg" class="smallersize"/>
+ 	  		<h1 style="color: white"> Ryan Silke</h1>
+ 	  			<h2 style="color: white">Job:</h2>
+ 	  			<h3 style="color: white">Coder</h3>
+ 	  	</div>
+ 	  </div>
+ 	  </div>
+ 	  </body>
 
  	  	<footer class="ezheadbackground"> 
 	 	  	<div class="footerNav">
@@ -141,7 +176,7 @@
 
 
 	 	  		<div class="iconFrame">
-	 	  			<img src="images/icons/credits.png"/>
+	 	  			<img src="images/icons/credits.png" ng-click="loadView('staff')" "/>
 	 	  		</div>
  	  		</div>
  	  	</footer>
