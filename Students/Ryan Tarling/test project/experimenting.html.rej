@@ -1,0 +1,23 @@
+diff a/Students/Ryan Tarling/experimenting.html b/Students/Ryan Tarling/experimenting.html	(rejected hunks)
+@@ -0,0 +1,21 @@
++<!DOCTYPE html>
++<html lang="en">
++	<head>
++		<title> this is a test</title>
++	</head>
++	<body>
++		<h1> heading is this website is a test.</h1>
++		<p> well you came to this awful site that is a test so try not to come back to it or it could be gone really soon.</p>
++		<p> this is annoying for a test site isnt it.</p>
++		<p> this will not stay long it will be destroyed soon enough</p>
++		<p> this will be destroyed with nothing but the delete button.</p>
++
++		<tagname>THIS IS A TEST.</tagname>
++		<p> who hates this site yet.</p>
++		<p> why are you still here.</p>
++		<p> GO away PLEASE THIS IS MY ALONE AREA.</p>
++		<img src="https://pbs.twimg.com/media/A-9mYIPCEAAZ-Aa.jpg" />
++		<a href="https://en.wikipedia.org/wiki/Battleship">LINK</a>
++	
++	</body>
++</html>
