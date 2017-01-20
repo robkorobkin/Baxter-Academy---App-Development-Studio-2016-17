@@ -39,9 +39,8 @@ app.controller('selectorCtrl', ['$scope',
 
 
 		$scope.selectPerson = function(){
-			var selectedId = $scope.selectedId;
-			if(selectedId == '') return;
-			$scope.selected_person = $scope.people[selectedId];
+			var index = $scope.selectedId;
+			$scope.selected_person = $scope.people[index];
 		}
 
 
